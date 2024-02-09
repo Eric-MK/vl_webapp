@@ -9,7 +9,12 @@
         <div class="modal">
           You are not Dorcas!
           <div><button @click="showError = false">Close</button></div>
-          
+        </div>
+      </div>
+      <!-- Success Popup Modal -->
+      <div v-if="showSuccess" class="modal-overlay" @click="showSuccess = false">
+        <div class="modal success">
+          Welcome Dorcas!❤️
         </div>
       </div>
     </div>
@@ -23,12 +28,18 @@ export default {
     return {
       enteredName: '',
       showError: false,
+      showSuccess: false, // New property for showing success message
     };
   },
   methods: {
     checkName() {
       if (this.enteredName.toLowerCase() === 'dorcas') {
-        this.$router.push({ name: 'name' }); // Navigate to the 'name' route
+        // Instead of navigating directly, show success message
+        this.showSuccess = true; 
+        // Add a delay before navigation to allow user to read the message
+        setTimeout(() => {
+          this.$router.push({ name: 'name' });
+        }, 3000); // Adjust the delay as needed
       } else {
         this.showError = true;
       }
@@ -134,6 +145,14 @@ button:hover {
 
 .modal {
   animation: popup 0.3s ease-out;
+}
+
+.success {
+  background-color: #e0ffe0; /* Soft green background for success */
+}
+
+.success button {
+  background-color: #4CAF50; /* Green */
 }
 </style>
 
