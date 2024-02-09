@@ -51,7 +51,7 @@ export default {
 
 .h1-valentine {
   font-family: 'Great Vibes', cursive;
-  font-size: 48px; /* Adjust the size as needed */
+  font-size: 50px; /* Adjust the size as needed */
   color: #e63946; /* Feel free to change the color */
 }
 
@@ -88,6 +88,7 @@ export default {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  
 }
 
 button {
@@ -121,11 +122,12 @@ button:hover {
 
 .modal {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 10px;
+  border-radius: 20px;
   max-width: 500px;
-  height: 97%;
+  height: 100%;
   text-align: center;
+  padding-bottom: 72px;
   
 }
 
