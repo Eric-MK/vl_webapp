@@ -45,7 +45,7 @@ export default {
 .dorcas-container {
   max-width: 800px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 200px;
   padding: 20px;
   text-align: center;
   background-color: #ffe0f0;
