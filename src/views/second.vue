@@ -81,4 +81,21 @@ export default {
   height: auto;
   border-radius: 8px;
 }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e63946;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff6b6b;
+}
+
 </style>
