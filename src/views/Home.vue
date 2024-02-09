@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <h1>Home Page</h1>
-    <input type="text" v-model="enteredName" placeholder="Enter your name"/>
-    <button @click="checkName">Enter</button>
-    <!-- Error Popup Modal -->
-    <div v-if="showError" class="modal-overlay" @click="showError = false">
-      <div class="modal">
-        You are not Dorcas!
-        <div><button @click="showError = false">Close</button></div>
-        
+  <div class="home-container">
+    <div>
+      <h1>Home Page</h1>
+      <input type="text" v-model="enteredName" placeholder="Enter your name"/>
+      <button @click="checkName">Enter</button>
+      <!-- Error Popup Modal -->
+      <div v-if="showError" class="modal-overlay" @click="showError = false">
+        <div class="modal">
+          You are not Dorcas!
+          <div><button @click="showError = false">Close</button></div>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -36,6 +38,50 @@ export default {
 </script>
 
 <style scoped>
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height of viewport */
+  text-align: center; /* Center text */
+}
+
+input[type="text"] {
+  max-width: 300px;
+  width: 100%; /* Full width */
+  padding: 12px 20px;
+  margin: 8px 0; /* Spacing */
+  display: inline-block;
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Box sizing */
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #e63946; /* Valentine's red when focused */
+  outline: none; /* Remove default focus outline */
+}
+
+button {
+  width: auto; /* Auto width based on content */
+  padding: 10px 20px; /* Padding */
+  background-color: #e63946; /* Valentine's red */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  margin-top: 10px; /* Margin top for spacing */
+}
+
+button:hover {
+  background-color: #ff6b6b; /* Lighter shade on hover */
+}
+
+
 .modal-overlay {
   position: fixed;
   top: 0;
