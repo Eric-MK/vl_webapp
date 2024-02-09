@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <div>
-      <h1>Home Page</h1>
+      <h1>Hey There!</h1>
       <input type="text" v-model="enteredName" placeholder="Enter your name"/>
       <button @click="checkName">Enter</button>
       <!-- Error Popup Modal -->
