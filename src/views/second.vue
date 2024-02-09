@@ -1,12 +1,10 @@
 <template>
     <div class="dorcas-container">
-      <h2 class="greeting">Happy Valentine's Day, Dorcas!</h2>
+      <h2 class="greeting">Fun Fact about the name Dorcas!</h2>
       <p class="message">
-        Just like your name suggests, you bring kindness and compassion to everyone around you. 
-        Your warmth lights up the darkest days, and your caring heart makes the world a better place. 
-        Here's to celebrating the wonderful person you are, Dorcas. 💖
+        Dorcas is a name of Greek origin. In the Bible Dorcas is a warm woman who is known for her charitable acts and good works. She is also referred to as Tabitha, which is an Aaramaic name. It is a name that was popular in the early Christian church.
       </p>
-      <div class="heart-animation"></div>
+      
     </div>
 </template>
   
@@ -20,8 +18,9 @@ export default {
 
 <style scoped>
 .dorcas-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
+  margin-top: 80px;
   padding: 20px;
   text-align: center;
   background-color: #ffe0f0;
@@ -40,16 +39,7 @@ export default {
   line-height: 1.6;
 }
 
-.heart-animation {
-  margin-top: 20px;
-  width: 100px;
-  height: 90px;
-  background-color: pink;
-  position: relative;
-  display: inline-block;
-  transform: rotate(45deg);
-  margin: 40px auto 0;
-}
+
 
 .heart-animation:before,
 .heart-animation:after {
