@@ -10,16 +10,8 @@
 <script>
 export default {
   name: 'Home',
-  data() {
-    return {
-      surprise: false,
-    };
-  },
-  methods: {
-    showSurprise() {
-      this.surprise = !this.surprise;
-    },
-  },
+  
+ 
 };
 </script>
 
@@ -29,9 +21,5 @@ export default {
   padding: 20px;
 }
 
-.gallery img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+
 </style>

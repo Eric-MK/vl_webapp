@@ -1,21 +1,26 @@
 <template>
-    <div class="dorcas-container">
-        <h2 class="greeting">🌹Fun Fact about the name Dorcas!🌹</h2>
-        <p class="message">
-            Dorcas is a name of Greek origin. In the Bible, Dorcas is a woman known for her charitable acts and good works. She is also referred to as Tabitha, which is an Aramaic name. It is a name that was popular in the early Christian church.
-        </p>
-        <button @click="showSurprise">Click for a Surprise</button>
-        <div v-if="surprise" class="modal-overlay" @click.self="surprise = false">
-            <div class="modal">
-                <h1 class="h1-valentine">Happy Valentine's Babe!❤️</h1>
-                <div class="gallery">
-                    <img src="@/assets/F1.png" alt="Love" />
+    <div class="content-wrapper">
+        <img src="@/assets/Roseline.png" alt="Side Image Left" class="side-image"/>
+        <div class="dorcas-container">
+            <h2 class="greeting">🌹Fun Fact about the name Dorcas!🌹</h2>
+            <p class="message">
+                Dorcas is a name of Greek origin. In the Bible, Dorcas is a woman known for her charitable acts and good works. She is also referred to as Tabitha, which is an Aramaic name. It is a name that was popular in the early Christian church.
+            </p>
+            <button @click="showSurprise">Click for a Surprise</button>
+            <div v-if="surprise" class="modal-overlay" @click.self="surprise = false">
+                <div class="modal">
+                    <h1 class="h1-valentine">Happy Valentine's Babe!❤️</h1>
+                    <div class="gallery">
+                        <img src="@/assets/F1.png" alt="Love" />
+                    </div>
+                    <button @click="surprise = false">Close</button>
                 </div>
-                <button @click="surprise = false">Close</button>
             </div>
         </div>
+        <img src="@/assets/Roseline.png" alt="Side Image Right" class="side-image"/>
     </div>
 </template>
+
 
   
 
@@ -59,6 +64,22 @@ export default {
   color: #e63946;
   margin-bottom: 15px;
 }
+
+.content-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the children horizontally */
+  align-items: center; /* Centers the children vertically */
+  gap: 20px; /* Adjust the space between the elements */
+}
+
+.side-image {
+  flex: 1; /* Allows the images to grow and shrink */
+  width: 150px; /* Initial width */
+  height: auto; /* Keeps the aspect ratio of the images */
+  max-width: 100%; /* Ensures the image does not overflow its container */
+}
+
+
 
 .message {
   font-size: 18px;
@@ -129,6 +150,18 @@ button:hover {
   text-align: center;
   padding-bottom: 72px;
   
+}
+
+@media (max-width: 600px) {
+  .side-image {
+    width: 100px; /* Smaller width on small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .side-image {
+    display: none; /* Hide side images on very small screens */
+  }
 }
 
 /* Add or modify button styles here if necessary */
