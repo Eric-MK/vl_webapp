@@ -1,17 +1,35 @@
 <template>
     <div class="dorcas-container">
-      <h2 class="greeting">Fun Fact about the name Dorcas!</h2>
+      <h2 class="greeting">🌹Fun Fact about the name Dorcas!🌹</h2>
       <p class="message">
         Dorcas is a name of Greek origin. In the Bible Dorcas is a warm woman who is known for her charitable acts and good works. She is also referred to as Tabitha, which is an Aaramaic name. It is a name that was popular in the early Christian church.
       </p>
-      
+      <button @click="showSurprise">Click for a Surprise</button>
+        <div v-if="surprise">
+            <div>
+                <h1>Happy Valentines Babe!❤️</h1>
+            </div>
+            <div class="gallery">
+                <img src="@/assets/F1.png" alt="Love" />
+            </div>
+        </div>
     </div>
 </template>
   
 
 <script>
 export default {
-  name: 'DorcasMessage'
+  name: 'DorcasMessage',
+  data() {
+    return {
+      surprise: false,
+    };
+  },
+ methods: {
+    showSurprise() {
+      this.surprise = !this.surprise;
+    },
+  },
 };
 </script>
 
@@ -56,5 +74,11 @@ export default {
 .heart-animation:after {
   left: 60px;
   top: -60px;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 </style>

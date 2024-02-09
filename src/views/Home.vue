@@ -3,12 +3,7 @@
     <h1>Hey Beutiful!</h1>
     <p>Whats your name?</p>
     
-    <button @click="showSurprise">Click for a Surprise</button>
-    <div v-if="surprise">
-      <div class="gallery">
-        <img src="@/assets/F1.png" alt="Love" />
-      </div>
-    </div>
+    
   </div>
 </template>
 
