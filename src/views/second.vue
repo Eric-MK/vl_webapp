@@ -106,7 +106,7 @@ export default {
 }
 
 .gallery img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 8px;
   
@@ -162,6 +162,13 @@ button:hover {
   .side-image {
     display: none; /* Hide side images on very small screens */
   }
+
+  .gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  
+}
 }
 
 /* Add or modify button styles here if necessary */
