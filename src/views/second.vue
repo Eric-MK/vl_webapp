@@ -2,9 +2,9 @@
     <div class="content-wrapper">
         <img src="@/assets/Roseline.png" alt="Side Image Left" class="side-image"/>
         <div class="dorcas-container">
-            <h2 class="greeting">🌹Fun Fact about the name Dorcas!🌹</h2>
+            <h2 class="greeting">🌹To my Lovely Girlfriend Dorcas!🌹</h2>
             <p class="message">
-                Dorcas is a name of Greek origin. In the Bible, Dorcas is a woman known for her charitable acts and good works. She is also referred to as Tabitha, which is an Aramaic name. It is a name that was popular in the early Christian church.
+              Though my hands may not be filled with riches, my heart is abundant with love for you, a treasure that holds immeasurable value to me. I acknowledge my imperfections and humbly pray for divine guidance to foster understanding and deepen our bond with each passing day. Your presence in my life is a blessing, shining among my greatest joys. In a small but heartfelt gesture, I've crafted this simple website just for you, hoping it serves as a testament to my feelings and our journey together.
             </p>
             <button @click="showSurprise">Click for a Surprise</button>
             <div v-if="surprise" class="modal-overlay" @click.self="surprise = false">
